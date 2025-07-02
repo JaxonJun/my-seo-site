@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply | Join ShweLucks Membership</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Apply now to join ShweLucks and unlock exclusive access to our premium gaming experience.">
+  <meta name="keywords" content="ShweLucks apply, join membership, sign up, gaming application">
+  <meta name="author" content="ShweLucks Team">
+  <meta property="og:title" content="Apply for ShweLucks" />
+  <meta property="og:description" content="Fill out the form to get access to ShweLucks perks and features." />
+  <meta property="og:image" content="https://www.shwelucks.vip/images/apply-preview.jpg" />
+  <meta property="og:url" content="https://www.shwelucks.vip/apply.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "url": "https://www.shwelucks.vip/apply.html",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "ShweLucks Support",
+    "email": "support@shwelucks.vip",
+    "telephone": "+1234567890"
+  }
+}
+</script>
+
+</head>
+<body>
+  <nav>
+    <div class="logo">ShweLucks</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="events.html">Events</a>
+      <a href="tournament.html">Tournaments</a>
+      <a href="blog.html">Blog</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About Us</a>
+      <a href="https://www.shwelucks.com/pages/desktop/index" onclick="trackClick('home', 'apply')" class="apply-button">Apply</a>
+    </div>
+  </nav>
+  <main>
+    <h1>Apply for Membership</h1>
+    <form class="apply-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="Phone Number" placeholder="Phone Number" required />
+      <button type="submit" >Submit</button>
+      </a>
+    </form>
+
+    <section class="card-container" style="margin-top: 3rem;">
+      <div class="card">
+        <img src="images/banner/vip.jpg" alt="VIP Membership" class="card-img" />
+        <h3>🎯 VIP Access Awaits</h3>
+        <p>Members enjoy early promotions, higher rewards, and exclusive bonuses.</p>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer style="text-align: center; padding: 2rem 0; color: #aaa; background-color: #0a1f33;">
+  <p>
+    <a href="faq.html" style="color: #aaa; margin: 0 1rem;">FAQ</a> |
+    <a href="blog.html" style="color: #aaa; margin: 0 1rem;">Blog</a> |
+    <a href="about.html" style="color: #aaa; margin: 0 1rem;">About Us</a>
+  </p>
+  <p style="font-size: 0.9rem;">&copy; 2025 ShweLucks. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+<script type="module">
+  document.querySelector('.apply-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = e.target.querySelector('input[type="text"]').value;
+    const PhoneNumber = e.target.querySelector('input[type="PhoneNumber"]').value;
+
+    const res = await fetch(`${import.meta.env.VITE_API_BASE}/api/apply`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email })
+    });
+
+    const result = await res.json();
+    if (result.success) {
+      alert('提交成功！');
+    } else {
+      alert('提交失败');
+    }
+  });
+</script>

@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ShweLucks News | Latest Gaming Updates</title>
+  <title>ShweLucks Events | Upcoming Promotions & Competitions</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Catch the latest gaming news and updates from ShweLucks. Stay informed about game releases, events, and more.">
-  <meta name="keywords" content="ShweLucks news, gaming updates, new games, online gaming, casino events">
+  <meta name="description" content="Discover upcoming events and competitions hosted by ShweLucks. Never miss an opportunity to win big!">
+  <meta name="keywords" content="ShweLucks events, gaming promotions, online tournaments, giveaways">
   <meta name="author" content="ShweLucks Team">
-  <meta property="og:title" content="ShweLucks News" />
-  <meta property="og:description" content="The latest in gaming news and ShweLucks updates." />
-  <meta property="og:image" content="https://www.shwelucks.vip/images/news-preview.jpg" />
-  <meta property="og:url" content="https://www.shwelucks.vip/news.html" />
+  <meta property="og:title" content="Upcoming ShweLucks Events" />
+  <meta property="og:description" content="Win big in our upcoming events and gaming promotions!" />
+  <meta property="og:image" content="https://www.shwelucks.vip/images/events-preview.jpg" />
+  <meta property="og:url" content="https://www.shwelucks.vip/events.html" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="stylesheet" href="/src/style.css" />
@@ -22,22 +22,23 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "url": "https://www.shwelucks.vip/news.html",
-  "itemListElement": [
-    {
-      "@type": "NewsArticle",
-      "headline": "Bonus Drop Surprise",
-      "url": "https://www.shwelucks.vip/news.html#bonus-drop",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://www.shwelucks.vip/images/news/bonusdrop.jpg"
-      },
-      "datePublished": "2025-07-05",
-      "description": "Get ready for random bonus drops this weekend."
-    }
-    /* Add similar entries for each news item dynamically */
-  ]
+  "@type": "Event",
+  "name": "Summer Spin Challenge",
+  "startDate": "2025-07-15T12:00",
+  "endDate": "2025-07-20T23:59",
+  "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "VirtualLocation",
+    "url": "https://www.shwelucks.vip/events.html"
+  },
+  "image": ["https://www.shwelucks.vip/images/events/summerchallenge.jpg"],
+  "description": "Compete with others and win prizes up to $5,000 in July!",
+  "organizer": {
+    "@type": "Organization",
+    "name": "ShweLucks",
+    "url": "https://www.shwelucks.vip"
+  }
 }
 </script>
 
@@ -57,21 +58,22 @@
     </div>
   </nav>
   <main>
-    <div class="animation-newstitle">
-    <h1>Latest News</h1>
+    <div class="animation-eventstitle">
+    <h1>Upcoming Events</h1>
     </div>
 
     <section class="card-container">
       <div class="card">
-        <img src="images/news/4.webp" alt="Bonus Drop Event" class="card-img" />
-        <h3>Bonus Drop Surprise 💰</h3>
-        <p>Get ready for random bonus drops this weekend. Stay online to win!</p>
+        <img src="images/events/4.webp" alt="Summer Spin Challenge" class="card-img" />
+        <h3>🔥 Summer Spin Challenge</h3>
+        <p>Compete with others and win prizes up to $5,000 this July!</p>
       </div>
     </section>
 
-    <div class="card-container" id="news-list"></div>
+    <div class="card-container" id="event-list"></div>
   </main>
-  <script type="module" src="/src/loadNews.js"></script>
+  <script type="module" src="/src/loadEvents.js"></script>
+  
   <script type="module" src="/src/main.js"></script>
 
 
