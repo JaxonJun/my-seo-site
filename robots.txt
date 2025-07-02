@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.shwelucks.vip/sitemap.xml
+Sitemap: https://www.shwelucksmm.com/sitemap.xml
